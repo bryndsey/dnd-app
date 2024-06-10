@@ -1,5 +1,5 @@
-import { client } from "../../network/client";
-import { resourceListSchema } from "../../network/types/resource";
+import { client } from "../../../network/client";
+import { resourceListSchema } from "../../../network/types/resource";
 
 export async function fetchClasses() {
   try {

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchClasses } from "./fetchClasses";
+import { fetchClasses } from "./api/fetchClasses";
 
 export function ClassListSection() {
   const { data, isLoading, error } = useQuery({
