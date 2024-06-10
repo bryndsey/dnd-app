@@ -17,7 +17,11 @@ export function RaceDetails() {
       {data && (
         <div>
           <h2>{data.name}</h2>
-          <p>{data.size}</p>
+          <p>{data.age}</p>
+          <p>{data.language_desc}</p>
+          <p>{data.size_description}</p>
+          <p>{data.speed}</p>
+          <p>{data.alignment}</p>
         </div>
       )}
     </div>
