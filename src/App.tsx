@@ -1,13 +1,23 @@
+import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { CommonProviders } from "./components/providers/CommonProviders";
-import { ClassListSection } from "./features/class/ClassList";
+
+// Import the generated route tree
+import { routeTree } from "./routeTree.gen";
+
+// Create a new router instance
+const router = createRouter({ routeTree });
+
+// Register the router instance for type safety
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
 
 function App() {
   return (
     <CommonProviders>
-      <h1>Dungeons and Dragons Character Guide</h1>
-      <div className="p-4 border m-2">
-        <ClassListSection />
-      </div>
+      <RouterProvider router={router} />
     </CommonProviders>
   );
 }
