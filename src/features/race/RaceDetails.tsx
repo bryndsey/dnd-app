@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link, useRouter } from "@tanstack/react-router";
 import { Route } from "../../routes/race.$index.lazy";
 import { fetchRace } from "./api/fetchRaces";
 
@@ -10,8 +11,11 @@ export function RaceDetails() {
     queryFn: () => fetchRace(index),
   });
 
+  const router = useRouter();
+
   return (
     <div>
+      <Link onClick={router.history.back}>{"← Back"}</Link>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
       {data && (
