@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "@tanstack/react-router";
 import { fetchClasses } from "./api/fetchClasses";
+import { Class } from "./types/Class";
 
 export function ClassListSection() {
   const { data, isLoading, error } = useQuery({
@@ -12,18 +14,18 @@ export function ClassListSection() {
       <h2>Classes</h2>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
-      {data && (
-        <ClassList classes={data.results.map((result) => result.name)} />
-      )}
+      {data && <ClassList classes={data.results} />}
     </div>
   );
 }
 
-export function ClassList({ classes }: { classes: string[] }) {
+export function ClassList({ classes }: { classes: Class[] }) {
   return (
     <ul>
-      {classes.map((className) => (
-        <li key={className}>{className}</li>
+      {classes.map(({ index, name }) => (
+        <li key={index}>
+          <Link to={`/class/${index}`}>{name}</Link>
+        </li>
       ))}
     </ul>
   );
