@@ -1,10 +1,10 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import { ClassListSection } from "../features/class/ClassList";
+import { RaceListSection } from "../features/race/RaceList";
 
 export const Route = createLazyFileRoute("/")({
   component: () => (
     <div className="p-4 border m-2">
-      <ClassListSection />
+      <RaceListSection />
     </div>
   ),
 });
