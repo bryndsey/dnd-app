@@ -5,6 +5,8 @@ test("index page should not have any automatically detectable accessibility issu
   page,
 }) => {
   await page.goto("http://localhost:5173/");
+  // Wait for the page to be fully loaded
+  await page.waitForLoadState("networkidle");
 
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
@@ -15,6 +17,8 @@ test("details page should not have any automatically detectable accessibility is
   page,
 }) => {
   await page.goto("http://localhost:5173/race/human/");
+  // Wait for the page to be fully loaded
+  await page.waitForLoadState("networkidle");
 
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 

@@ -14,7 +14,7 @@ export function RaceDetails() {
   const router = useRouter();
 
   return (
-    <div className="p-4">
+    <div>
       <Link onClick={router.history.back}>{"← Back"}</Link>
       <br />
       {isLoading && <p>Loading...</p>}
