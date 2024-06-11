@@ -26,7 +26,7 @@ interface RaceDetailsContentProps {
   data: RaceDetails;
 }
 
-function RaceDetailsContent({ data }: RaceDetailsContentProps) {
+export function RaceDetailsContent({ data }: RaceDetailsContentProps) {
   return (
     <>
       <h2 className="text-2xl font-bold">{data.name}</h2>
