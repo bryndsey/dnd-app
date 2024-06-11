@@ -5,7 +5,7 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <header>
-        <h1 className="text-3xl font-bold p-2">
+        <h1 className="text-xl sm:text-3xl font-bold p-2">
           Dungeons and Dragons Character Guide
         </h1>
         <hr />
