@@ -6,15 +6,23 @@ export interface RaceDetailsProps {
 }
 
 export function RaceDetailsSection({ index }: RaceDetailsProps) {
-  const { data, isLoading, error } = useRace(index);
+  const result = useRace(index);
 
-  return (
-    <div>
-      {isLoading && <p>Loading...</p>}
-      {error && <p>Error: {error.message}</p>}
-      {data && <RaceDetailsContent data={data} />}
-    </div>
-  );
+  if (result.status === "pending") {
+    return <p>Loading...</p>;
+  }
+
+  if (result.status === "error") {
+    return (
+      <>
+        <p>Oops, looks like we rolled a Nat 1...</p>
+        <p>An error occurred while trying to fetch details</p>
+        {result.error && <p>{result.error.message}</p>}
+      </>
+    );
+  }
+
+  return <div>{<RaceDetailsContent data={result.data} />}</div>;
 }
 
 interface RaceDetailsContentProps {
