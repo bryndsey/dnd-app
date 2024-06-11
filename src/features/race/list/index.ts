@@ -1,1 +1,1 @@
-export { RaceListSection } from "./RaceListSection";
+export { RaceListSection } from "./components/RaceListSection";

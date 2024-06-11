@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchRaces } from "./fetchRaces";
+import { fetchRaces } from "../api/fetchRaces";
 import { Pending, Error, Success } from "@/types/resultStates";
 import { ResourceList } from "@/network/types/resource";
 

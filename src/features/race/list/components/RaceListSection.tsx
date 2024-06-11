@@ -1,4 +1,4 @@
-import { useRaceList } from "./useRaceList";
+import { useRaceList } from "../hooks/useRaceList";
 import { ErrorDisplay } from "@/components/ErrorDisplay";
 import { RaceListContent } from "./RaceListContent";
 

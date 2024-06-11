@@ -1,4 +1,4 @@
-import { Race } from "./Race";
+import { Race } from "../types/Race";
 import { Link } from "@/components/Link";
 
 export function RaceListContent({ races }: { races: Race[] }) {
