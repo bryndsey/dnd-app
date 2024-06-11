@@ -8,6 +8,7 @@ import { ReactElement, ReactNode } from "react";
 import { QueryProvider } from "../lib/QueryProvider";
 
 const TestProviders = ({ children }: { children: ReactNode }) => {
+  // Add a new routing setup that renders the children
   const rootRoute = createRootRoute({ component: () => children });
   const router = createRouter({ routeTree: rootRoute });
 
