@@ -1,4 +1,4 @@
-import { RaceDetails } from "./RaceDetails";
+import { RaceDetails } from "../types/RaceDetails";
 
 interface RaceDetailsContentProps {
   data: RaceDetails;

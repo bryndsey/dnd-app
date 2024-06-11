@@ -1,2 +1,2 @@
-export { RaceDetailsSection } from "./RaceDetailsSection";
-export type { RaceDetailsProps } from "./RaceDetailsSection";
+export { RaceDetailsSection } from "./components/RaceDetailsSection";
+export type { RaceDetailsProps } from "./components/RaceDetailsSection";

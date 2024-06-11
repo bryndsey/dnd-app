@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchRace } from "./fetchRaceDetails";
-import { RaceDetails } from "./RaceDetails";
+import { fetchRace } from "../api/fetchRaceDetails";
+import { RaceDetails } from "../types/RaceDetails";
 import { Pending, Error, Success } from "@/types/resultStates";
 
 export type RaceResult = Pending | Error | Success<RaceDetails>;
