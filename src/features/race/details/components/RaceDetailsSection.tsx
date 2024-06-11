@@ -14,10 +14,10 @@ export function RaceDetailsSection({ index }: RaceDetailsProps) {
   return (
     <AnimatePresence mode="wait">
       {result.status === "pending" && (
-        <div className="h-16">
+        <div className="size-48">
           <motion.div
             animate={{
-              y: [64, 0],
+              y: ["150%", 0],
               transition: {
                 duration: 0.5,
                 repeat: Infinity,
@@ -27,7 +27,7 @@ export function RaceDetailsSection({ index }: RaceDetailsProps) {
             }}
             exit={{ transition: { delay: 3.5 } }}
             key={"loading"}
-            className="size-16"
+            className="size-1/3 m-auto"
           >
             <motion.div
               animate={{
@@ -42,7 +42,7 @@ export function RaceDetailsSection({ index }: RaceDetailsProps) {
                 },
               }}
               exit={{ opacity: 0, scale: 0, transition: { delay: 3.5 } }}
-              className="size-16"
+              className="size-full"
             >
               <img src={loadingIcon} className="size-full" />
             </motion.div>
