@@ -1,15 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
 import { Link, useRouter } from "@tanstack/react-router";
 import { Route } from "../../routes/race.$index.lazy";
-import { fetchRace } from "./api/fetchRaces";
+import { useRace } from "./hooks/useRace";
 
 export function RaceDetails() {
   const index = Route.useParams().index;
 
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["race", index],
-    queryFn: () => fetchRace(index),
-  });
+  const { data, isLoading, error } = useRace(index);
 
   const router = useRouter();
 

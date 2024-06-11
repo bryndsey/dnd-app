@@ -1,13 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
-import { fetchRaces } from "./api/fetchRaces";
+import { useRaceList } from "./hooks/useRaceList";
 import { Race } from "./types/Race";
 
 export function RaceListSection() {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["races"],
-    queryFn: fetchRaces,
-  });
+  const { data, isLoading, error } = useRaceList();
 
   return (
     <div>
