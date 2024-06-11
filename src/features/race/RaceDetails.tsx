@@ -1,10 +1,11 @@
 import { Link, useRouter } from "@tanstack/react-router";
-import { Route } from "../../routes/race.$index.lazy";
 import { useRace } from "./hooks/useRace";
 
-export function RaceDetails() {
-  const index = Route.useParams().index;
+export interface RaceDetailsProps {
+  index: string;
+}
 
+export function RaceDetails({ index }: RaceDetailsProps) {
   const { data, isLoading, error } = useRace(index);
 
   const router = useRouter();
