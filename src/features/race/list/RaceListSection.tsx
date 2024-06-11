@@ -1,7 +1,7 @@
 import { useRaceList } from "./useRaceList";
-import { Race } from "../types/Race";
-import { ErrorDisplay } from "../../../components/ErrorDisplay";
-import { Link } from "../../../components/Link";
+import { Race } from "./Race";
+import { ErrorDisplay } from "@/components/ErrorDisplay";
+import { Link } from "@/components/Link";
 
 export function RaceListSection() {
   const result = useRaceList();

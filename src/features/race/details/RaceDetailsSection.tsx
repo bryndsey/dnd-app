@@ -1,6 +1,6 @@
 import { useRace } from "./useRace";
-import { RaceDetails } from "../types/Race";
-import { ErrorDisplay } from "../../../components/ErrorDisplay";
+import { RaceDetails } from "./RaceDetails";
+import { ErrorDisplay } from "@/components/ErrorDisplay";
 
 export interface RaceDetailsProps {
   index: string;
