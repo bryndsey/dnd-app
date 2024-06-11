@@ -11,7 +11,7 @@ export function RaceListSection() {
 
   return (
     <div>
-      <h2>Races</h2>
+      <h2 className="text-lg font-bold">Races</h2>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
       {data && <RaceList races={data.results} />}
