@@ -1,5 +1,6 @@
 import { useRace } from "./useRace";
 import { RaceDetails } from "../types/Race";
+import { ErrorDisplay } from "../../../components/ErrorDisplay";
 
 export interface RaceDetailsProps {
   index: string;
@@ -14,11 +15,7 @@ export function RaceDetailsSection({ index }: RaceDetailsProps) {
 
   if (result.status === "error") {
     return (
-      <>
-        <p>Oops, looks like we rolled a Nat 1...</p>
-        <p>An error occurred while trying to fetch details</p>
-        {result.error && <p>{result.error.message}</p>}
-      </>
+      <ErrorDisplay message="An error occurred while trying to fetch details" />
     );
   }
 

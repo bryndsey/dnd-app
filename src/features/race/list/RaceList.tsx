@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useRaceList } from "./useRaceList";
 import { Race } from "../types/Race";
+import { ErrorDisplay } from "../../../components/ErrorDisplay";
 
 export function RaceListSection() {
   const result = useRaceList();
@@ -11,11 +12,7 @@ export function RaceListSection() {
 
   if (result.status === "error") {
     return (
-      <>
-        <p>Oops, looks like we rolled a Nat 1...</p>
-        <p>An error occurred while trying to fetch the list of races</p>
-        {result.error && <p>{result.error.message}</p>}
-      </>
+      <ErrorDisplay message="An error occurred while trying to fetch the list of races" />
     );
   }
 
