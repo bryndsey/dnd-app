@@ -1,12 +1,11 @@
-import { RouterProvider } from "@tanstack/react-router";
-import { CommonProviders } from "./components/providers/CommonProviders";
-import { router } from "./router";
+import { QueryProvider } from "./lib/QueryProvider";
+import { RouterProvider } from "./lib/RouterProvider";
 
 function App() {
   return (
-    <CommonProviders>
-      <RouterProvider router={router} />
-    </CommonProviders>
+    <QueryProvider>
+      <RouterProvider />
+    </QueryProvider>
   );
 }
 

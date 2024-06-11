@@ -5,16 +5,16 @@ import {
 } from "@tanstack/react-router";
 import { render, RenderOptions } from "@testing-library/react";
 import { ReactElement, ReactNode } from "react";
-import { CommonProviders } from "../components/providers/CommonProviders";
+import { QueryProvider } from "../lib/QueryProvider";
 
 const TestProviders = ({ children }: { children: ReactNode }) => {
   const rootRoute = createRootRoute({ component: () => children });
   const router = createRouter({ routeTree: rootRoute });
 
   return (
-    <CommonProviders>
+    <QueryProvider>
       <RouterProvider router={router} />
-    </CommonProviders>
+    </QueryProvider>
   );
 };
 
