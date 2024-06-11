@@ -1,3 +1,3 @@
-import { Resource } from "@/network/types/resource";
+import { Resource } from "@/types/resource";
 
 export type Race = Resource;

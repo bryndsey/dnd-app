@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { resourceSchema } from "@/network/types/resource";
+import { resourceSchema } from "@/types/resource";
 
 export const raceSchema = z.object({
   ...resourceSchema.shape,

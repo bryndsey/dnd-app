@@ -1,7 +1,7 @@
-import { client } from "@/network/client";
-import { resourceListSchema } from "@/network/types/resource";
+import { httpClient } from "@/lib/httpClient";
+import { resourceListSchema } from "@/types/resource";
 
 export async function fetchRaces() {
-  const response = await client.get("/api/races");
+  const response = await httpClient.get("/api/races");
   return resourceListSchema.parse(response.data);
 }
