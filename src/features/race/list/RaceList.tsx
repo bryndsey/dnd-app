@@ -1,7 +1,7 @@
-import { Link } from "@tanstack/react-router";
 import { useRaceList } from "./useRaceList";
 import { Race } from "../types/Race";
 import { ErrorDisplay } from "../../../components/ErrorDisplay";
+import { Link } from "../../../components/Link";
 
 export function RaceListSection() {
   const result = useRaceList();
@@ -29,7 +29,7 @@ export function RaceList({ races }: { races: Race[] }) {
     <ul>
       {races.map(({ index, name }) => (
         <li key={index}>
-          <Link to={`/race/${index}`}>{name}</Link>
+          <Link href={`/race/${index}`}>{name}</Link>
         </li>
       ))}
     </ul>
