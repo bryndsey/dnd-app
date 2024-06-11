@@ -1,5 +1,5 @@
-import { useRace } from "./hooks/useRace";
-import { RaceDetails } from "./types/Race";
+import { useRace } from "./useRace";
+import { RaceDetails } from "../types/Race";
 
 export interface RaceDetailsProps {
   index: string;

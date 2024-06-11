@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { useRaceList } from "./hooks/useRaceList";
-import { Race } from "./types/Race";
+import { useRaceList } from "./useRaceList";
+import { Race } from "../types/Race";
 
 export function RaceListSection() {
   const result = useRaceList();

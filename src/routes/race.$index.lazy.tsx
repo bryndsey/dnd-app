@@ -1,5 +1,5 @@
 import { createLazyFileRoute, Link, useRouter } from "@tanstack/react-router";
-import { RaceDetailsSection } from "../features/race/RaceDetails";
+import { RaceDetailsSection } from "../features/race/details/RaceDetails";
 
 export const Route = createLazyFileRoute("/race/$index")({
   component: () => <RaceDetailsPage />,
