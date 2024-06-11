@@ -1,4 +1,3 @@
-import { Link, useRouter } from "@tanstack/react-router";
 import { useRace } from "./hooks/useRace";
 
 export interface RaceDetailsProps {
@@ -8,12 +7,8 @@ export interface RaceDetailsProps {
 export function RaceDetails({ index }: RaceDetailsProps) {
   const { data, isLoading, error } = useRace(index);
 
-  const router = useRouter();
-
   return (
     <div>
-      <Link onClick={router.history.back}>{"← Back"}</Link>
-      <br />
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
       {data && (
