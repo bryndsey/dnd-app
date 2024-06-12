@@ -23,7 +23,15 @@ export function LoadingIndicator() {
           opacity: 1,
           rotate: 360,
         }}
-        exit={{ opacity: 0, scale: 0, transition: { delay: 0.75 } }}
+        exit={{
+          opacity: 0,
+          scale: 0,
+          transition: {
+            // Add a short delay so the indicator doesn't just flash on-screen and then disappear.
+            // It does add some extra delay for users, but I think it feels less jarring.
+            delay: 0.75,
+          },
+        }}
         key={"loading"}
         className="size-1/3 m-auto"
       />
