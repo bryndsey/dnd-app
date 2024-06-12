@@ -7,7 +7,7 @@ export function ErrorDisplay({
 }: ErrorDisplayProps) {
   return (
     <>
-      <p className="text-xl">Oops, looks like we rolled a Nat 1...</p>
+      <h3 className="text-xl">Oops, looks like we rolled a Nat 1...</h3>
       <p className="text-gray-700">{message}</p>
     </>
   );
