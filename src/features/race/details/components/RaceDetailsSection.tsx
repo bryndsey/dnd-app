@@ -13,7 +13,11 @@ export function RaceDetailsSection({ index }: RaceDetailsProps) {
 
   return (
     <AnimatePresence mode="wait">
-      {result.status === "pending" && <LoadingIndicator />}
+      {result.status === "pending" && (
+        <div className="grid place-items-center py-10">
+          <LoadingIndicator />
+        </div>
+      )}
 
       {result.status === "error" && (
         <motion.div
