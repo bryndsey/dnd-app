@@ -7,7 +7,7 @@ export function RaceListContent({ races }: { races: Race[] }) {
       {races.map(({ index, name }) => (
         <li key={index}>
           <Link to={`/race/${index}`}>
-            <div className="rounded-xl shadow-md p-6 sm:p-8 border text-xl font-bold hover:-translate-y-1 transition-all hover:shadow-lg active:translate-y-0 active:shadow-md">
+            <div className="rounded-xl shadow-md p-6 sm:p-8 border text-3xl font-semibold hover:-translate-y-1 transition-all hover:shadow-lg active:translate-y-0 active:shadow-md">
               {name}
             </div>
           </Link>

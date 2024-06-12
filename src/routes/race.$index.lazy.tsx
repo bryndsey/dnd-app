@@ -10,7 +10,7 @@ function RaceDetailsPage() {
 
   const router = useRouter();
   return (
-    <div className="p-4">
+    <div className="p-4 space-y-2">
       <Link onClick={router.history.back}>{"← Back"}</Link>
       <br />
       <RaceDetailsSection index={index} />
