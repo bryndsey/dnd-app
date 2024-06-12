@@ -10,7 +10,7 @@ export const Route = createRootRoute({
         </h1>
         <hr />
       </header>
-      <main className="max-w-screen-xl mx-auto">
+      <main className="max-w-screen-xl mx-auto sm:p-4">
         <Outlet />
       </main>
       <TanStackRouterDevtools />
