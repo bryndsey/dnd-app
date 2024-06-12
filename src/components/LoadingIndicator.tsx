@@ -33,7 +33,7 @@ export function LoadingIndicator() {
           },
         }}
         key={"loading"}
-        className="size-2/5 m-auto"
+        className="m-auto size-2/5"
         role="presentation"
       />
     </div>
