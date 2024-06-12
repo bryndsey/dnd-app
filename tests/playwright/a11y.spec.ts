@@ -6,7 +6,7 @@ test("index page should not have any automatically detectable accessibility issu
 }) => {
   await page.goto("http://localhost:5173/");
   // Wait for the page to be fully loaded
-  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("link", { name: "Human" })).toBeVisible();
 
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
@@ -18,7 +18,7 @@ test("details page should not have any automatically detectable accessibility is
 }) => {
   await page.goto("http://localhost:5173/race/human/");
   // Wait for the page to be fully loaded
-  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("heading", { name: "Human" })).toBeVisible();
 
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
