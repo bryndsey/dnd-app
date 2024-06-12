@@ -3,7 +3,7 @@ import loadingIcon from "@/assets/D20.svg";
 
 export function LoadingIndicator() {
   return (
-    <div className="size-24">
+    <div className="size-24" role="progressbar" aria-label="Loading indicator">
       <motion.img
         src={loadingIcon}
         animate={{
@@ -34,6 +34,7 @@ export function LoadingIndicator() {
         }}
         key={"loading"}
         className="size-2/5 m-auto"
+        role="presentation"
       />
     </div>
   );
