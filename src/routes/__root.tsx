@@ -5,12 +5,12 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <header>
-        <h1 className="text-xl sm:text-3xl font-bold p-2">
-          Dungeons and Dragons Character Guide
+        <h1 className="text-xl sm:text-2xl font-bold p-2">
+          D&D Character Guide
         </h1>
         <hr />
       </header>
-      <main>
+      <main className="max-w-screen-xl mx-auto">
         <Outlet />
       </main>
       <TanStackRouterDevtools />

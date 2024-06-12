@@ -28,8 +28,9 @@ export function RaceListSection() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           key={"success"}
+          className="space-y-4"
         >
-          <h2 className="text-lg font-bold">Races</h2>
+          <h2 className="text-2xl font-bold">Races</h2>
           <RaceListContent races={result.data.results} />
         </motion.div>
       )}
