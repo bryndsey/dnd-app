@@ -56,7 +56,10 @@ function ControlledCookieDialog({
 }: ControlledCookieDialogProps) {
   return (
     <Popover open={isOpen}>
-      <PopoverTrigger onClick={onTriggerClicked}>
+      <PopoverTrigger
+        onClick={onTriggerClicked}
+        aria-label="Cookie preferences"
+      >
         <Cookie className="transition-all hover:-translate-y-1" />
       </PopoverTrigger>
       <PopoverContent
