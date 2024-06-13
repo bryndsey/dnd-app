@@ -76,6 +76,10 @@ function ControlledCookieDialog({
             This website doesn't store any cookies. I just want to know if you
             like to eat cookies?
           </p>
+          <p className="text-xs">
+            (By continuing to use this site without submitting your preference,
+            you agree that you like to eat cookies.)
+          </p>
           <div className="space-x-2">
             <input
               aria-labelledby="preferenceLabel"
