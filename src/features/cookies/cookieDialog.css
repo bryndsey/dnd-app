@@ -5,6 +5,7 @@ especially because some of these particular styles are more complex via Tailwind
 .PopoverContent {
   transform-origin: var(--radix-popover-content-transform-origin);
   max-width: var(--radix-popover-content-available-width);
+  max-height: var(--radix-popover-content-available-height);
   animation: scaleIn 0.25s cubic-bezier(0.2, 0.2, 0.2, 1.2);
 }
 
