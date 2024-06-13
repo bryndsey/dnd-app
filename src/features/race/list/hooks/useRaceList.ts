@@ -1,9 +1,9 @@
+import { Error, Pending, Success } from "@/types/resultStates";
 import { useQuery } from "@tanstack/react-query";
 import { fetchRaces } from "../api/fetchRaces";
-import { Pending, Error, Success } from "@/types/resultStates";
-import { ResourceList } from "@/types/resource";
+import { Race } from "../types/Race";
 
-export type RaceListResult = Pending | Error | Success<ResourceList>;
+export type RaceListResult = Pending | Error | Success<Race[]>;
 
 export function useRaceList(): RaceListResult {
   const { status, data, error } = useQuery({

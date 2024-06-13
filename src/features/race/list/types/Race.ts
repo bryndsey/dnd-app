@@ -1,3 +1,4 @@
-import { Resource } from "@/types/resource";
-
-export type Race = Resource;
+export type Race = {
+  index: string;
+  name: string;
+};

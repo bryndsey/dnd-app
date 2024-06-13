@@ -1,7 +1,13 @@
 import { httpClient } from "@/lib/httpClient";
-import { resourceListSchema } from "@/types/resource";
+import { ApiRaceList, apiRaceListSchema } from "./ApiRace";
+import { Race } from "../types/Race";
 
 export async function fetchRaces() {
   const response = await httpClient.get("/api/races");
-  return resourceListSchema.parse(response.data);
+  const listData = apiRaceListSchema.parse(response.data);
+  return convertToDomainModel(listData);
+}
+
+function convertToDomainModel(data: ApiRaceList): Race[] {
+  return data.results;
 }

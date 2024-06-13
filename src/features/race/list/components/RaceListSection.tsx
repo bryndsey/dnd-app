@@ -35,7 +35,7 @@ export function RaceListSection() {
           className="space-y-4"
         >
           <h2 className="text-4xl font-bold">Races</h2>
-          <RaceListContent races={result.data.results} />
+          <RaceListContent races={result.data} />
         </motion.div>
       )}
     </AnimatePresence>
