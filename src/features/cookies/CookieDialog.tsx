@@ -58,6 +58,7 @@ function ControlledCookieDialog({
       <PopoverContent
         collisionPadding={16}
         onOpenAutoFocus={(e) => e.preventDefault()}
+        aria-label="Cookie preference dialog"
       >
         <div className="max-w-xs space-y-3 rounded-lg border bg-white p-6 shadow-xl">
           <p className="font-bold">This is a fake cookies popup</p>
@@ -67,15 +68,16 @@ function ControlledCookieDialog({
           </p>
           <div className="space-x-2">
             <input
+              aria-labelledby="preferenceLabel"
               type="checkbox"
               checked={isChecked}
               onChange={onCheckedChange}
             />
-            <label>Cookies... yum!</label>
+            <label id="preferenceLabel">Cookies... yum!</label>
           </div>
           <button
             onClick={onSubmit}
-            className="rounded bg-blue-500 p-2 text-white transition-all hover:-translate-y-1 active:translate-y-0"
+            className="rounded bg-blue-600 p-2 text-white transition-all hover:-translate-y-1 active:translate-y-0"
           >
             Submit
           </button>
