@@ -106,3 +106,10 @@ It covers some basic accessibility testing, but is not intended as a complete re
 - Even though it's kind of superfluous, I like how the loading indicator turned out (especially if it loads for a few seconds and you can see the animation loop a few times).
 - I wanted to include D&D classes in the app as well, but the data in the API was less convenient for my purposes, and ultimately it didn't feel like it would show technical details that weren't already demonstrated.
 - Despite not being very familiar with it, I opted to use Tanstack Router as it seemed like it had some benefits over a tool like React Router. In retrospect, I would probably have preferred React Router though as there were some oddities with Tanstack Router.
+
+### Known issues
+
+- On mobile devices where the browser bar appearing/disappearing changes the height of the viewport, the cookies popover can slide away from its anchor.
+  - This seems to be an issue with the Radix library I used, but I didn't have time to identify the root cause
+- There is a warning in the console about the Tanstack Router `notFoundRoute` API being deprecated.
+  - Ironically, the link shown in the warning leads to a 404 page on the Router docs...
