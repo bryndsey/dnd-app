@@ -8,7 +8,7 @@ export const PopoverContent = ({
   ...props
 }: React.ComponentProps<"div">) => (
   <PopoverPrimitive.Portal>
-    <PopoverPrimitive.Content sideOffset={5} {...props}>
+    <PopoverPrimitive.Content {...props}>
       {children}
       <PopoverPrimitive.Arrow />
     </PopoverPrimitive.Content>
