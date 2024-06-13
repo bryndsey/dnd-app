@@ -67,7 +67,7 @@ function ControlledCookieDialog({
         onClick={onTriggerClicked}
         aria-label="Cookie preferences"
       >
-        <Cookie className="transition-all hover:-translate-y-1" />
+        <Cookie fill="white" className="transition-all hover:-translate-y-1" />
       </PopoverTrigger>
       <PopoverContent
         sideOffset={8}
