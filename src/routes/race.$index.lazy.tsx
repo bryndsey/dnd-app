@@ -1,5 +1,5 @@
-import { createLazyFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { RaceDetailsSection } from "@/features/race/details";
+import { createLazyFileRoute, Link } from "@tanstack/react-router";
 
 // This is the "details" page showing a single item
 
@@ -10,10 +10,9 @@ export const Route = createLazyFileRoute("/race/$index")({
 function RaceDetailsPage() {
   const index = Route.useParams().index;
 
-  const router = useRouter();
   return (
     <div className="space-y-2 p-4">
-      <Link onClick={router.history.back}>{"← Back"}</Link>
+      <Link to={"/"}>{"← Back"}</Link>
       <br />
       <RaceDetailsSection index={index} />
     </div>
