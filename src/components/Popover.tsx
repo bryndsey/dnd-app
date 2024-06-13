@@ -6,11 +6,8 @@ export const PopoverTrigger = PopoverPrimitive.Trigger;
 export const PopoverContent = ({
   children,
   ...props
-}: React.ComponentProps<"div">) => (
+}: React.ComponentProps<"div"> & PopoverPrimitive.PopoverContentProps) => (
   <PopoverPrimitive.Portal>
-    <PopoverPrimitive.Content {...props}>
-      {children}
-      <PopoverPrimitive.Arrow />
-    </PopoverPrimitive.Content>
+    <PopoverPrimitive.Content {...props}>{children}</PopoverPrimitive.Content>
   </PopoverPrimitive.Portal>
 );

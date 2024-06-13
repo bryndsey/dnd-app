@@ -1,5 +1,4 @@
-import { Popover } from "@/components/Popover";
-import { PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/Popover";
 import { useAtom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
 import { useState } from "react";
