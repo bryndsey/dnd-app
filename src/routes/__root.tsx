@@ -17,7 +17,8 @@ export const Route = createRootRoute({
           <CookieDialog />
         </div>
       </main>
-      <TanStackRouterDevtools />
+      {/* Enable this to see router dev tools */}
+      {/* <TanStackRouterDevtools /> */}
     </>
   ),
 });
