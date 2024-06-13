@@ -28,3 +28,5 @@ test("details are visible", async ({ page }) => {
   await expect(page.getByText(/Speed/)).toBeVisible();
   await expect(page.getByText(/Alignment/)).toBeVisible();
 });
+
+// TODO: Implement tests for cookies flow?

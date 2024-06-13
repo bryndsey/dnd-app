@@ -4,6 +4,8 @@ import { render } from "@/test/utils";
 import "@testing-library/jest-dom";
 import { RaceListContent } from "./RaceListContent";
 
+// Simple unit test of the stateless component
+
 const testList = [
   { index: "1", name: "Race 1", url: "http://example.com/race1" },
   { index: "2", name: "Race 2", url: "http://example.com/race2" },

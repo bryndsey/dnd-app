@@ -6,16 +6,22 @@ import { useState } from "react";
 import { Cookie } from "lucide-react";
 import "./cookieDialog.css";
 
+// This component was made to show some basic state management
+
+// Use Jotai to store the cookie-related data and get those values via hooks
+const cookiePreference = atomWithStorage("cookiePreference", true, undefined, {
+  getOnInit: true,
+});
+
+// This atom determines whether to show the dialog on page load
 const hasSubmittedCookiePreference = atomWithStorage(
   "hasSubmittedCookiePreference",
   false,
   undefined,
   { getOnInit: true },
 );
-const cookiePreference = atomWithStorage("cookiePreference", true, undefined, {
-  getOnInit: true,
-});
 
+// Stateful component
 export function CookieDialog() {
   const [submitted, setSubmitted] = useAtom(hasSubmittedCookiePreference);
   const [isOpen, setIsOpen] = useState(!submitted);
@@ -47,6 +53,7 @@ interface ControlledCookieDialogProps {
   onTriggerClicked: () => void;
 }
 
+// Pure/stateless component
 function ControlledCookieDialog({
   isOpen,
   isChecked,

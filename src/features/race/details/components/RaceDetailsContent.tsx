@@ -3,7 +3,7 @@ import { RaceDetails } from "../types/RaceDetails";
 interface RaceDetailsContentProps {
   data: RaceDetails;
 }
-
+// Pure/stateless components
 export function RaceDetailsContent({ data }: RaceDetailsContentProps) {
   return (
     <div className="space-y-4">

@@ -4,6 +4,7 @@ import { RaceListContent } from "./RaceListContent";
 import { LoadingIndicator } from "@/components/LoadingIndicator";
 import { AnimatePresence, motion } from "framer-motion";
 
+// Stateful container component
 export function RaceListSection() {
   const result = useRaceList();
 

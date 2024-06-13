@@ -9,6 +9,7 @@ export function LoadingIndicator() {
         animate={{
           y: ["150%", 0],
           transition: {
+            // This animates the die bouncing up and down
             y: {
               duration: 0.5,
               repeat: Infinity,
@@ -21,6 +22,7 @@ export function LoadingIndicator() {
             ease: "linear",
           },
           opacity: 1,
+          // This animates the die spinning back and forth
           rotate: 360,
         }}
         exit={{

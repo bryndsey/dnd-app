@@ -1,6 +1,7 @@
 import { Race } from "../types/Race";
 import { Link } from "@tanstack/react-router";
 
+// Stateless component
 export function RaceListContent({ races }: { races: Race[] }) {
   return (
     <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

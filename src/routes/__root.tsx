@@ -2,6 +2,7 @@ import { CookieDialog } from "@/features/cookies/CookieDialog";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 // import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
+// This is the root layout that will be reused across different routes
 export const Route = createRootRoute({
   component: () => (
     <>

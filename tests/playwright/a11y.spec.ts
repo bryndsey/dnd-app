@@ -1,6 +1,9 @@
 import AxeBuilder from "@axe-core/playwright";
 import { test, expect } from "@playwright/test";
 
+// Add some basic accessibility tests. Automated a11y tests can only catch so much,
+// but it is a good reminder and basic gatekeeper for us to keep a11y in mind.
+
 test("index page should not have any automatically detectable accessibility issues", async ({
   page,
 }) => {

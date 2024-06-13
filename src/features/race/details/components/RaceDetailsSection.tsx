@@ -8,10 +8,12 @@ export interface RaceDetailsProps {
   index: string;
 }
 
+// Stateful container component
 export function RaceDetailsSection({ index }: RaceDetailsProps) {
   const result = useRace(index);
 
   return (
+    // I'm using Framer Motion to animate between states
     <AnimatePresence mode="wait">
       {result.status === "pending" && (
         <div className="grid place-items-center py-10">

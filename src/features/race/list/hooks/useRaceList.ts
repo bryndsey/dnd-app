@@ -11,6 +11,9 @@ export function useRaceList(): RaceListResult {
     queryFn: fetchRaces,
   });
 
+  // This mapping may seem redundant given that the consumer could just check the status,
+  // but I wanted to create a discriminated union to make the types more expressive of intent.
+
   if (status === "pending") {
     return { status: "pending" };
   }

@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { resourceSchema } from "@/types/resource";
 
+// Zod for validation
 export const apiRaceDetailsSchema = z.object({
   ...resourceSchema.shape,
   speed: z.number(),
@@ -11,4 +12,5 @@ export const apiRaceDetailsSchema = z.object({
   language_desc: z.string(),
 });
 
+// Create separate API model from the main "domain" model.
 export type ApiRaceDetails = z.infer<typeof apiRaceDetailsSchema>;

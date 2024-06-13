@@ -1,3 +1,7 @@
+/* 
+I'm using TailwindCSS elsewhere, but I wanted to show some basic CSS usage as well,
+especially because some of these particular styles are more complex via Tailwind.
+*/
 .PopoverContent {
   transform-origin: var(--radix-popover-content-transform-origin);
   max-width: var(--radix-popover-content-available-width);

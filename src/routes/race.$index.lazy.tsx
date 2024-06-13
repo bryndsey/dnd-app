@@ -1,6 +1,8 @@
 import { createLazyFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { RaceDetailsSection } from "@/features/race/details";
 
+// This is the "details" page showing a single item
+
 export const Route = createLazyFileRoute("/race/$index")({
   component: () => <RaceDetailsPage />,
 });
