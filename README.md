@@ -2,7 +2,7 @@
 
 ## Overview
 
-This application displays some data related to character creation for the role-playing game Dungeons and Dragons.
+This application displays some data related to character creation for the role-playing game Dungeons and Dragons (D&D).
 
 At the moment, it only shows information about common races (e.g. Human, Elf, Halfling, etc.).
 
@@ -41,3 +41,67 @@ After that, the app will usually be available at http://localhost:4173/ for prod
 You can run unit tests (made using Vitest) by running `npm run test`.
 
 You can run end-to-end tests (made using Playwright) by running `npm run e2e`.
+
+## Implementation Notes
+
+I tried to capture many code-specific notes as comments within the code itself, but here are a few higher-level details.
+
+### Tech stack
+
+- Vite
+- Typescript
+- React
+- Tanstack Router
+- Tanstack Query
+- Axios
+- Zod
+- Jotai
+- Tailwind CSS
+- Framer Motion
+- Vitest
+- Playwright
+- Radix UI
+
+### Architecture
+
+My general approach was to focus on architectural foundations.
+
+I am using a file structure and architecture similar to that of [bulletproof-react](https://github.com/alan2207/bulletproof-react).
+A few notable aspects of this structure:
+
+- Directories dividing the app into "features" and "core" code
+- Features are broken down into directories representing different "layers" - i.e. API, Views, Models/Domain, etc.
+  - Thus, each feature contains the full end-to-end code for a given set of funcitonality.
+
+This structure is based on some concepts from things like "Clean Architecture" - namely, having different application layers and trying to manage dependencies between different layers (as well as features).
+
+Given that this application is quite simple, the code/architecture is arguably "over-engineered", and probably violates the [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) ("You Aren't Gonna Need It") principle, but is done for the sake of demonstration and emulating what might structure might look like in a larger, more complex codebase.
+
+### State management
+
+Because the primary functionality of this app is to fetch and display data from an API, the state management is laregly handled by using the Tanstack Query library, which performs task like caching, retries for errors, and more.
+
+That being said, I added a contrived "Cookies" dialog feature to demonstrate non-server state management.
+It uses a combination of local component state along with data kept in local storage.
+
+I used Jotai for its atomic state management model, which I personally like.
+It also includes some convenient tools to interact with local storage which I used.
+
+### Testing
+
+I opted to use a mixture of unit and end-to-end (e2e) style tests.
+
+The unit tests that I implemented using Vitest (similar to Jest) primarily test my stateless components.
+I could have also tested the stateful components by using techniques like mocking, but given time constraints I opted not to do that at the moment.
+
+The e2e tests are written using Playwright.
+Since the functionality is fairly simple in the app, the tests there are quite basic.
+
+For both unit and e2e tests, I added a11y testing using axe-core plugins.
+It covers some basic accessibility testing, but is not intended as a complete replacement for manual testing.
+
+### Other notable details
+
+- I opted to use Tanstack Router as it seemed like it had some benefits over a tool like React Router, despite not being very familiar with it. In retrospect, I would probably have preferred React Router though as there were some oddities with Tanstack Router.
+- Even though it's kind of superfluous, I like how the loading indicator turned out (especially if it loads for a few seconds and you can see the animation loop a few times).
+- I wanted to include D&D classes in the app as well, but the data in the API was less convenient for my purposes, and ultimately it didn't feel like it would show technical details that weren't already demonstrated.
