@@ -3,6 +3,8 @@ import { PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
 import { useAtom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
 import { useState } from "react";
+import { Cookie } from "lucide-react";
+import "./cookieDialog.css";
 
 const hasSubmittedCookiePreference = atomWithStorage(
   "hasSubmittedCookiePreference",
@@ -54,11 +56,16 @@ function ControlledCookieDialog({
 }: ControlledCookieDialogProps) {
   return (
     <Popover open={isOpen}>
-      <PopoverTrigger onClick={onTriggerClicked}>Cookies</PopoverTrigger>
+      <PopoverTrigger onClick={onTriggerClicked}>
+        <Cookie className="transition-all hover:-translate-y-1" />
+      </PopoverTrigger>
       <PopoverContent
+        sideOffset={8}
         collisionPadding={16}
         onOpenAutoFocus={(e) => e.preventDefault()}
         aria-label="Cookie preference dialog"
+        align="end"
+        className="PopoverContent"
       >
         <div className="max-w-xs space-y-3 rounded-lg border bg-white p-6 shadow-xl">
           <p className="font-bold">This is a fake cookies popup</p>
