@@ -55,8 +55,11 @@ function ControlledCookieDialog({
   return (
     <Popover open={isOpen}>
       <PopoverTrigger onClick={onTriggerClicked}>Cookies</PopoverTrigger>
-      <PopoverContent>
-        <div className="m-4 max-w-sm rounded-lg border p-6 shadow-xl">
+      <PopoverContent
+        collisionPadding={16}
+        onOpenAutoFocus={(e) => e.preventDefault()}
+      >
+        <div className="max-w-xs space-y-3 rounded-lg border bg-white p-6 shadow-xl">
           <p className="font-bold">This is a fake cookies popup</p>
           <p>
             This website doesn't store any cookies. I just want to know if you
@@ -72,7 +75,7 @@ function ControlledCookieDialog({
           </div>
           <button
             onClick={onSubmit}
-            className="mt-4 rounded bg-blue-500 p-2 text-white transition-all hover:-translate-y-1 active:translate-y-0"
+            className="rounded bg-blue-500 p-2 text-white transition-all hover:-translate-y-1 active:translate-y-0"
           >
             Submit
           </button>
