@@ -13,10 +13,10 @@ export function RaceDetailsContent({ data }: RaceDetailsContentProps) {
           <InfoCard title="Age">{data.age}</InfoCard>
         </li>
         <li>
-          <InfoCard title="Language">{data.language_desc}</InfoCard>
+          <InfoCard title="Language">{data.languageDescription}</InfoCard>
         </li>
         <li>
-          <InfoCard title="Size">{data.size_description}</InfoCard>
+          <InfoCard title="Size">{data.sizeDescription}</InfoCard>
         </li>
         <li>
           <InfoCard title="Speed">{`${data.speed} feet per round.`}</InfoCard>
