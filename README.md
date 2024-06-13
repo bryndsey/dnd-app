@@ -115,3 +115,16 @@ It covers some basic accessibility testing, but is not intended as a complete re
   - This seems to be an issue with the Radix library I used, but I didn't have time to identify the root cause
 - There is a warning in the console about the Tanstack Router `notFoundRoute` API being deprecated.
   - Ironically, the link shown in the warning leads to a 404 page on the Router docs...
+
+## Next steps
+
+If were to continue working on this, here are a few things I would likely focus on next:
+
+- More comprehensive accessibility manual testing and implementation
+- More comprehensive automated tests
+  - For example, mocking API responses to check error and loading states
+- Better encapsulate "core" code
+- Add better protections to enforce limitations on inter-package dependencies
+  - See [this section](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md) of the bulletproof-react docs, for example
+- Improve error handling - e.g. give more specific messaging for certain types of errors
+- Add D&D classes
