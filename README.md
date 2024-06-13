@@ -89,7 +89,9 @@ It also includes some convenient tools to interact with local storage which I us
 
 ### Testing
 
-I opted to use a mixture of unit and end-to-end (e2e) style tests.
+The testing is not as comprehensive as I would normally do in a production codebase given the time constraints. I tried to cover a handful of the most important pieces of functionality and demonstrate general testing abilities.
+
+I used a mixture of unit and end-to-end (e2e) style tests.
 
 The unit tests that I implemented using Vitest (similar to Jest) primarily test my stateless components.
 I could have also tested the stateful components by using techniques like mocking, but given time constraints I opted not to do that at the moment.
