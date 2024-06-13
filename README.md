@@ -123,8 +123,10 @@ If were to continue working on this, here are a few things I would likely focus 
 - More comprehensive accessibility manual testing and implementation
 - More comprehensive automated tests
   - For example, mocking API responses to check error and loading states
-- Better encapsulate "core" code
 - Add better protections to enforce limitations on inter-package dependencies
   - See [this section](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md) of the bulletproof-react docs, for example
+- Use better abstractions for routing
+  - To prevent links needing to know specifics about other routes
+- Better encapsulate "core" code
 - Improve error handling - e.g. give more specific messaging for certain types of errors
 - Add D&D classes
