@@ -102,6 +102,7 @@ It covers some basic accessibility testing, but is not intended as a complete re
 
 ### Other notable details
 
-- I opted to use Tanstack Router as it seemed like it had some benefits over a tool like React Router, despite not being very familiar with it. In retrospect, I would probably have preferred React Router though as there were some oddities with Tanstack Router.
+- I'm certainly not a professional designer, but I tried to implement some basic UX patterns, including responsive layout and text size.
 - Even though it's kind of superfluous, I like how the loading indicator turned out (especially if it loads for a few seconds and you can see the animation loop a few times).
 - I wanted to include D&D classes in the app as well, but the data in the API was less convenient for my purposes, and ultimately it didn't feel like it would show technical details that weren't already demonstrated.
+- Despite not being very familiar with it, I opted to use Tanstack Router as it seemed like it had some benefits over a tool like React Router. In retrospect, I would probably have preferred React Router though as there were some oddities with Tanstack Router.
