@@ -125,6 +125,7 @@ If were to continue working on this, here are a few things I would likely focus 
   - For example, mocking API responses to check error and loading states
 - Add better protections to enforce limitations on inter-package dependencies
   - See [this section](https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md) of the bulletproof-react docs, for example
+- Resolve known issues
 - Use better abstractions for routing
   - To prevent links needing to know specifics about other routes
 - Better encapsulate "core" code
